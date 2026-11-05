@@ -1,0 +1,29 @@
+name: paper-session
+on:
+  schedule:
+    - cron: "40 3 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "session or check"
+        default: "check"
+permissions:
+  contents: write
+concurrency: paper
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install yfinance pandas
+      - run: python paper_trader.py ${{ github.event.inputs.mode || 'session' }}
+      - name: Save results
+        if: always()
+        run: |
+          git config user.name "tradepilot-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || (git commit -m "results $(date -u +%F)" && git pull --rebase && git push)
