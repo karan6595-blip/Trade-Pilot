@@ -1,1 +1,41 @@
-{"sessions":[]}
+{
+ "sessions": [],
+ "last_check": {
+  "at": "2026-11-05T12:35:24.603904+05:30",
+  "result": {
+   "NIFTY 50": {
+    "last_bar": "2026-11-05T12:35:00+05:30",
+    "close": 24434.6,
+    "lag_minutes": 0.4
+   },
+   "BANK NIFTY": {
+    "last_bar": "2026-11-05T12:35:00+05:30",
+    "close": 57359.85,
+    "lag_minutes": 0.4
+   }
+  }
+ },
+ "config": {
+  "symbols": {
+   "NIFTY 50": "^NSEI",
+   "BANK NIFTY": "^NSEBANK"
+  },
+  "lot": {
+   "NIFTY 50": 75,
+   "BANK NIFTY": 30
+  },
+  "delta": 0.5,
+  "charges_per_trade": 60,
+  "or_end": "09:45",
+  "entry_end": "11:00",
+  "stop_all": "11:15",
+  "confirm_closes": 2,
+  "buffer_pct": 0.03,
+  "rr": 1.5,
+  "max_trades": 2,
+  "max_consec_losses": 2,
+  "poll_sec": 30,
+  "max_lag_min": 5
+ },
+ "updated": "2026-11-05T12:35:24.603911+05:30"
+}
