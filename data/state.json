@@ -1,5 +1,17 @@
 {
- "sessions": [],
+ "sessions": [
+  {
+   "date": "2026-11-06",
+   "status": "running",
+   "trades": [],
+   "max_lag_min": 3.8,
+   "notes": [
+    "open position at end was not closed: {\"inst\": \"NIFTY 50\", \"dir\": 1, \"side\": \"CE\", \"entry\": 24600.0, \"stop\": 24484.9, \"target\": 24772.65, \"entry_time\": \"09:46:19\", \"or_high\": 24581.69921875, \"or_low\": 24388.099609375}"
+   ],
+   "net_est_rupees_one_lot": 0,
+   "net_points": 0
+  }
+ ],
  "last_check": {
   "at": "2026-11-06T09:43:20.652932+05:30",
   "result": {
@@ -37,5 +49,5 @@
   "poll_sec": 30,
   "max_lag_min": 5
  },
- "updated": "2026-11-06T09:43:20.652942+05:30"
+ "updated": "2026-11-06T10:59:03.112122+05:30"
 }
