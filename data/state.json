@@ -13,10 +13,29 @@
   },
   {
    "date": "2026-11-09",
-   "status": "running",
-   "trades": [],
-   "max_lag_min": 1.0,
-   "notes": []
+   "status": "completed",
+   "trades": [
+    {
+     "inst": "BANK NIFTY",
+     "dir": -1,
+     "side": "PE",
+     "entry": 58974.25,
+     "stop": 59199.62,
+     "target": 58636.19,
+     "entry_time": "10:41:05",
+     "or_high": 59382.25,
+     "or_low": 59017.0,
+     "exit": 59158.35,
+     "exit_time": "11:15:19",
+     "reason": "session end",
+     "points": -184.1,
+     "est_rupees_one_lot": -2822.0
+    }
+   ],
+   "max_lag_min": 3.3,
+   "notes": [],
+   "net_est_rupees_one_lot": -2822.0,
+   "net_points": -184.1
   }
  ],
  "last_check": {
@@ -56,5 +75,5 @@
   "poll_sec": 30,
   "max_lag_min": 5
  },
- "updated": "2026-11-09T11:09:46.782333+05:30"
+ "updated": "2026-11-09T11:15:19.826703+05:30"
 }
