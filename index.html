@@ -7,22 +7,25 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 ui-sans-serif,-apple-system,system-ui,sans-serif;padding:env(safe-area-inset-top) 18px calc(env(safe-area-inset-bottom) + 24px)}
 main{max-width:620px;margin:0 auto}h1{font:600 22px ui-serif,Georgia,serif;margin:22px 0 2px}h2{font:600 17px ui-serif,Georgia,serif;margin:28px 0 8px}
 p{margin:0;color:var(--mute)}.banner{border:1px solid var(--amb);color:var(--amb);padding:10px 12px;border-radius:6px;margin:14px 0;font-size:14px}
-.net{font:600 44px ui-serif,Georgia,serif;margin:6px 0 0}.up{color:var(--up)}.dn{color:var(--dn)}
+.net{font:600 44px ui-serif,Georgia,serif;margin:6px 0 0}.sub{color:var(--mute);font-size:14px}.up{color:var(--up)}.dn{color:var(--dn)}
 dl{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:10px 0}dt{color:var(--mute)}dd{margin:0;text-align:right}
 .tr{border-top:1px solid var(--line);padding:10px 0;display:grid;grid-template-columns:1fr auto;gap:2px 12px}.tr small{color:var(--mute)}
 </style></head><body><main>
 <h1>TradePilot paper journal</h1><p id="upd">Loading…</p>
-<div class="banner">Simulation only. Rupee figures estimate one lot at an assumed 0.5 delta, not real option prices.</div>
-<p>Net result across all sessions (estimated)</p><div class="net" id="net">–</div>
-<dl id="sum"></dl><h2>Data check</h2><dl id="chk"></dl><h2>Sessions</h2><div id="list"><p>No sessions yet. The first one runs on the next weekday morning.</p></div>
+<div class="banner">Simulation only. The main result is index points. Rupee figures estimate one lot at an assumed 0.5 delta.</div>
+<p>Net result across completed sessions</p><div class="net" id="net">–</div><div class="sub" id="rs"></div>
+<dl id="sum"></dl><h2>Data check</h2><dl id="chk"></dl><h2>Sessions</h2><div id="list"><p>No sessions yet.</p></div>
 </main><script>
-const f=(n)=>(n>=0?"+":"−")+"₹"+Math.abs(Math.round(n)).toLocaleString("en-IN");
-fetch("data/state.json?"+Date.now()).then(r=>r.json()).then(s=>{
- const ss=s.sessions||[],tr=ss.flatMap(x=>x.trades),net=tr.reduce((a,t)=>a+t.est_rupees_one_lot,0),w=tr.filter(t=>t.est_rupees_one_lot>0).length;
+const p=(n)=>(n>=0?"+":"−")+Math.abs(n).toFixed(1)+" pts";
+const r=(n)=>(n>=0?"+":"−")+"₹"+Math.abs(Math.round(n)).toLocaleString("en-IN");
+fetch("data/state.json?"+Date.now()).then(x=>x.json()).then(s=>{
+ const all=s.sessions||[],ss=all.filter(x=>x.status==="completed"),tr=ss.flatMap(x=>x.trades);
+ const pts=tr.reduce((a,t)=>a+t.points,0),rs=tr.reduce((a,t)=>a+t.est_rupees_one_lot,0),w=tr.filter(t=>t.points>0).length;
  document.getElementById("upd").textContent=s.updated?"Updated "+new Date(s.updated).toLocaleString("en-IN"):"No results yet";
- const n=document.getElementById("net");n.textContent=f(net);n.className="net "+(net>=0?"up":"dn");
- document.getElementById("sum").innerHTML=`<dt>Sessions</dt><dd>${ss.length}</dd><dt>Trades</dt><dd>${tr.length}</dd><dt>Winning trades</dt><dd>${tr.length?Math.round(100*w/tr.length)+"%":"–"}</dd>`;
- const c=s.last_check;document.getElementById("chk").innerHTML=c?Object.entries(c.result).map(([k,v])=>`<dt>${k} data delay</dt><dd>${v.lag_minutes??v} min</dd>`).join(""):"<dt>Run the “check” action once</dt><dd></dd>";
- if(ss.length)document.getElementById("list").innerHTML=ss.slice().reverse().map(x=>`<div class="tr"><b>${x.date}</b><b class="${x.net_est_rupees_one_lot>=0?"up":"dn"}">${f(x.net_est_rupees_one_lot)}</b><small>${x.status}; ${x.trades.length} trades; max data lag ${x.max_lag_min} min</small><small>${x.net_points} pts</small>${x.trades.map(t=>`<small>${t.inst} ${t.side} ${t.entry_time}→${t.exit_time} (${t.reason})</small><small>${t.points} pts</small>`).join("")}${x.notes.map(n=>`<small class="dn">${n}</small><small></small>`).join("")}</div>`).join("");
+ const n=document.getElementById("net");n.textContent=p(pts);n.className="net "+(pts>=0?"up":"dn");
+ document.getElementById("rs").textContent="About "+r(rs)+" on one lot after estimated charges";
+ document.getElementById("sum").innerHTML=`<dt>Completed sessions</dt><dd>${ss.length} of 20</dd><dt>Trades</dt><dd>${tr.length}</dd><dt>Winning trades</dt><dd>${tr.length?Math.round(100*w/tr.length)+"%":"–"}</dd><dt>Average per trade</dt><dd>${tr.length?p(pts/tr.length):"–"}</dd>`;
+ const c=s.last_check;document.getElementById("chk").innerHTML=c?Object.entries(c.result).map(([k,v])=>`<dt>${k} data delay</dt><dd>${v.lag_minutes??v} min</dd>`).join(""):"";
+ if(all.length)document.getElementById("list").innerHTML=all.slice().reverse().map(x=>`<div class="tr"><b>${x.date}</b><b class="${(x.net_points||0)>=0?"up":"dn"}">${p(x.net_points||0)}</b><small>${x.status}; ${x.trades.length} trades; max data lag ${x.max_lag_min} min</small><small>${r(x.net_est_rupees_one_lot||0)} est.</small>${x.trades.map(t=>`<small>${t.inst} ${t.side} ${t.entry_time}→${t.exit_time} (${t.reason})</small><small>${t.points} pts</small>`).join("")}${(x.notes||[]).map(m=>`<small class="dn">${m}</small><small></small>`).join("")}</div>`).join("");
 }).catch(()=>document.getElementById("upd").textContent="Could not load results.");
 </script></body></html>
