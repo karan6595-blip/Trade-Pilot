@@ -36,6 +36,16 @@
    "notes": [],
    "net_est_rupees_one_lot": -2822.0,
    "net_points": -184.1
+  },
+  {
+   "date": "2026-11-10",
+   "status": "market closed or no data today",
+   "trades": [],
+   "max_lag_min": 0,
+   "notes": [],
+   "empty_polls": 10,
+   "net_est_rupees_one_lot": 0,
+   "net_points": 0
   }
  ],
  "last_check": {
@@ -75,5 +85,5 @@
   "poll_sec": 30,
   "max_lag_min": 5
  },
- "updated": "2026-11-09T11:15:19.826703+05:30"
+ "updated": "2026-11-10T10:03:29.839341+05:30"
 }
