@@ -101,10 +101,29 @@
   },
   {
    "date": "2026-11-13",
-   "status": "running",
-   "trades": [],
+   "status": "completed",
+   "trades": [
+    {
+     "inst": "NIFTY 50",
+     "dir": 1,
+     "side": "CE",
+     "entry": 25209.85,
+     "stop": 25139.75,
+     "target": 25315.0,
+     "entry_time": "10:06:23",
+     "or_high": 25201.9,
+     "or_low": 25077.6,
+     "exit": 25171.65,
+     "exit_time": "11:15:22",
+     "reason": "session end",
+     "points": -38.2,
+     "est_rupees_one_lot": -1492.0
+    }
+   ],
    "max_lag_min": 3.5,
-   "notes": []
+   "notes": [],
+   "net_est_rupees_one_lot": -1492.0,
+   "net_points": -38.2
   }
  ],
  "last_check": {
@@ -144,5 +163,5 @@
   "poll_sec": 30,
   "max_lag_min": 5
  },
- "updated": "2026-11-13T11:05:18.445868+05:30"
+ "updated": "2026-11-13T11:15:22.791325+05:30"
 }
