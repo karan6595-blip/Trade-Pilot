@@ -127,10 +127,12 @@
   },
   {
    "date": "2026-11-16",
-   "status": "running",
+   "status": "completed",
    "trades": [],
    "max_lag_min": 1.0,
-   "notes": []
+   "notes": [],
+   "net_est_rupees_one_lot": 0,
+   "net_points": 0
   }
  ],
  "last_check": {
@@ -170,5 +172,5 @@
   "poll_sec": 30,
   "max_lag_min": 5
  },
- "updated": "2026-11-16T11:12:38.751528+05:30"
+ "updated": "2026-11-16T11:15:11.178444+05:30"
 }
