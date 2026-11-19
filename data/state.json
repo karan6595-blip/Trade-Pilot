@@ -49,124 +49,134 @@
   },
   {
    "date": "2026-11-11",
-   "status": "completed",
-   "trades": [
-    {
-     "inst": "BANK NIFTY",
-     "dir": 1,
-     "side": "CE",
-     "entry": 60854.7,
-     "stop": 60600.72,
-     "target": 61235.66,
-     "entry_time": "10:29:45",
-     "or_high": 60813.2,
-     "or_low": 60388.25,
-     "exit": 61138.05,
-     "exit_time": "11:15:04",
-     "reason": "session end",
-     "points": 283.35,
-     "est_rupees_one_lot": 4190.0
-    }
-   ],
-   "max_lag_min": 1.0,
-   "notes": [],
-   "net_est_rupees_one_lot": 4190.0,
-   "net_points": 283.35
-  },
-  {
-   "date": "2026-11-12",
-   "status": "completed",
-   "trades": [
-    {
-     "inst": "NIFTY 50",
-     "dir": 1,
-     "side": "CE",
-     "entry": 25365.0,
-     "stop": 25250.42,
-     "target": 25536.86,
-     "entry_time": "10:03:45",
-     "or_high": 25355.85,
-     "or_low": 25145.0,
-     "exit": 25294.2,
-     "exit_time": "11:15:24",
-     "reason": "session end",
-     "points": -70.8,
-     "est_rupees_one_lot": -2715.0
-    }
-   ],
-   "max_lag_min": 1.0,
-   "notes": [],
-   "net_est_rupees_one_lot": -2715.0,
-   "net_points": -70.8
-  },
-  {
-   "date": "2026-11-13",
-   "status": "completed",
-   "trades": [
-    {
-     "inst": "NIFTY 50",
-     "dir": 1,
-     "side": "CE",
-     "entry": 25209.85,
-     "stop": 25139.75,
-     "target": 25315.0,
-     "entry_time": "10:06:23",
-     "or_high": 25201.9,
-     "or_low": 25077.6,
-     "exit": 25171.65,
-     "exit_time": "11:15:22",
-     "reason": "session end",
-     "points": -38.2,
-     "est_rupees_one_lot": -1492.0
-    }
-   ],
-   "max_lag_min": 3.5,
-   "notes": [],
-   "net_est_rupees_one_lot": -1492.0,
-   "net_points": -38.2
-  },
-  {
-   "date": "2026-11-16",
-   "status": "completed",
+   "method": "replay-v3",
    "trades": [],
-   "max_lag_min": 1.0,
-   "notes": [],
-   "net_est_rupees_one_lot": 0,
+   "notes": [
+    "BANK NIFTY signal skipped: 1 lot costs about \u20b922,896"
+   ],
+   "net_rupees": 0,
    "net_points": 0
   },
   {
-   "date": "2026-11-17",
-   "status": "completed",
+   "date": "2026-11-12",
+   "method": "replay-v3",
+   "trades": [],
+   "notes": [
+    "NIFTY 50 signal skipped: 1 lot costs about \u20b911,894",
+    "BANK NIFTY signal skipped: 1 lot costs about \u20b922,074"
+   ],
+   "net_rupees": 0,
+   "net_points": 0
+  },
+  {
+   "date": "2026-11-13",
+   "method": "replay-v3",
    "trades": [
     {
-     "inst": "BANK NIFTY",
+     "inst": "NIFTY 50",
      "dir": 1,
      "side": "CE",
-     "entry": 62058.7,
-     "stop": 61694.05,
-     "target": 62605.67,
-     "entry_time": "10:03:52",
-     "or_high": 61885.75,
-     "or_low": 61502.35,
-     "exit": 62270.4,
-     "exit_time": "11:15:22",
-     "reason": "session end",
-     "points": 211.7,
-     "est_rupees_one_lot": 3115.0
+     "strike": 25250,
+     "spot_in": 25225.65,
+     "expiry": "2026-11-17 15:30:00+05:30",
+     "lots": 1,
+     "entry_prem": 139.61,
+     "entry_time": "09:57",
+     "stop_prem": 104.70750000000001,
+     "target_prem": 191.26570000000004,
+     "exit_prem": 109.64,
+     "exit_time": "11:15",
+     "reason": "time",
+     "points": -57.0,
+     "est_rupees": -2020.54
     }
    ],
-   "max_lag_min": 4.0,
    "notes": [],
-   "net_est_rupees_one_lot": 3115.0,
-   "net_points": 211.7
+   "net_rupees": -2020.54,
+   "net_points": -57.0
+  },
+  {
+   "date": "2026-11-16",
+   "method": "replay-v3",
+   "trades": [
+    {
+     "inst": "NIFTY 50",
+     "dir": 1,
+     "side": "CE",
+     "strike": 25300,
+     "spot_in": 25322.2,
+     "expiry": "2026-11-17 15:30:00+05:30",
+     "lots": 1,
+     "entry_prem": 91.93,
+     "entry_time": "09:52",
+     "stop_prem": 68.9475,
+     "target_prem": 125.94410000000002,
+     "exit_prem": 68.95,
+     "exit_time": "10:12",
+     "reason": "stop",
+     "points": -46.6,
+     "est_rupees": -1554.78
+    }
+   ],
+   "notes": [
+    "BANK NIFTY signal skipped: 1 lot costs about \u20b918,190"
+   ],
+   "net_rupees": -1554.78,
+   "net_points": -46.6
+  },
+  {
+   "date": "2026-11-17",
+   "method": "replay-v3",
+   "trades": [
+    {
+     "inst": "NIFTY 50",
+     "dir": 1,
+     "side": "CE",
+     "strike": 25350,
+     "spot_in": 25372.8,
+     "expiry": "2026-11-17 15:30:00+05:30",
+     "lots": 3,
+     "entry_prem": 47.1,
+     "entry_time": "09:52",
+     "stop_prem": 35.325,
+     "target_prem": 64.527,
+     "exit_prem": 64.53,
+     "exit_time": "10:19",
+     "reason": "target",
+     "points": 39.2,
+     "est_rupees": 3314.73
+    },
+    {
+     "inst": "NIFTY 50",
+     "dir": 1,
+     "side": "CE",
+     "strike": 25400,
+     "spot_in": 25398.75,
+     "expiry": "2026-11-17 15:30:00+05:30",
+     "lots": 4,
+     "entry_prem": 32.17,
+     "entry_time": "10:20",
+     "stop_prem": 24.1275,
+     "target_prem": 44.072900000000004,
+     "exit_prem": 24.13,
+     "exit_time": "10:33",
+     "reason": "stop",
+     "points": -17.45,
+     "est_rupees": -2160.32
+    }
+   ],
+   "notes": [
+    "BANK NIFTY signal skipped: 1 lot costs about \u20b917,553"
+   ],
+   "net_rupees": 1154.41,
+   "net_points": 21.75
   },
   {
    "date": "2026-11-18",
-   "status": "completed",
+   "method": "replay-v3",
    "trades": [],
-   "max_lag_min": 1.0,
    "notes": [],
-   "net_est_rupees_one_lot": 0,
+   "net_rupees": 0,
    "net_points": 0
   },
   {
@@ -198,21 +208,31 @@
    "BANK NIFTY": "^NSEBANK"
   },
   "lot": {
-   "NIFTY 50": 75,
+   "NIFTY 50": 65,
    "BANK NIFTY": 30
   },
-  "delta": 0.5,
-  "charges_per_trade": 60,
+  "step": {
+   "NIFTY 50": 50,
+   "BANK NIFTY": 100
+  },
+  "iv": {
+   "NIFTY 50": 0.13,
+   "BANK NIFTY": 0.15
+  },
+  "rate": 0.065,
+  "daily_capital": 10000,
+  "stop_pct": 25,
+  "target_pct": 37,
+  "slip_pct": 1,
+  "brokerage": 40,
+  "var_charge_pct": 0.2,
   "or_end": "09:45",
   "entry_end": "11:00",
   "stop_all": "11:15",
   "confirm_closes": 2,
   "buffer_pct": 0.03,
-  "rr": 1.5,
   "max_trades": 2,
-  "max_consec_losses": 2,
-  "poll_sec": 30,
-  "max_lag_min": 5
+  "max_consec_losses": 2
  },
- "updated": "2026-11-19T10:47:59.689593+05:30"
+ "updated": "2026-11-19T10:57:05.725986+05:30"
 }
