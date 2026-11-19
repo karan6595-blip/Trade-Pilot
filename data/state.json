@@ -185,7 +185,7 @@
    "trades": [],
    "notes": [
     "BANK NIFTY signal skipped: 1 lot costs about \u20b914,895",
-    "NIFTY 50 signal skipped: 1 lot costs about \u20b910,370"
+    "NIFTY 50 signal skipped: 1 lot costs about \u20b910,385"
    ],
    "net_rupees": 0,
    "net_points": 0
@@ -238,5 +238,5 @@
   "max_trades": 2,
   "max_consec_losses": 2
  },
- "updated": "2026-11-19T12:18:44.191053+05:30"
+ "updated": "2026-11-19T15:04:29.345299+05:30"
 }
