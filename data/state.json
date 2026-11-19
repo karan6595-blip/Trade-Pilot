@@ -168,6 +168,13 @@
    "notes": [],
    "net_est_rupees_one_lot": 0,
    "net_points": 0
+  },
+  {
+   "date": "2026-11-19",
+   "status": "running",
+   "trades": [],
+   "max_lag_min": 0.8,
+   "notes": []
   }
  ],
  "last_check": {
@@ -207,5 +214,5 @@
   "poll_sec": 30,
   "max_lag_min": 5
  },
- "updated": "2026-11-18T11:15:18.725319+05:30"
+ "updated": "2026-11-19T10:17:46.494195+05:30"
 }
