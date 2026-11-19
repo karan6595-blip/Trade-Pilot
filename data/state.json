@@ -173,7 +173,7 @@
    "date": "2026-11-19",
    "status": "running",
    "trades": [],
-   "max_lag_min": 0.9,
+   "max_lag_min": 1.0,
    "notes": []
   }
  ],
@@ -214,5 +214,5 @@
   "poll_sec": 30,
   "max_lag_min": 5
  },
- "updated": "2026-11-19T10:37:55.341803+05:30"
+ "updated": "2026-11-19T10:47:59.689593+05:30"
 }
