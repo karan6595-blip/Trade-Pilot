@@ -1,19 +1,20 @@
 name: paper-session
 on:
   schedule:
-    - cron: "40 3 * * 1-5"
+    - cron: "50 5 * * 1-5"
+    - cron: "30 8 * * 1-5"
   workflow_dispatch:
     inputs:
       mode:
-        description: "session or check"
-        default: "check"
+        description: "backfill, session or check"
+        default: "backfill"
 permissions:
   contents: write
 concurrency: paper
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,5 +26,9 @@ jobs:
         run: |
           git config user.name "tradepilot-bot"
           git config user.email "bot@users.noreply.github.com"
+          cp data/state.json /tmp/state.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/state.json data/state.json
           git add data
-          git diff --cached --quiet || (git commit -m "results $(date -u +%F)" && git pull --rebase && git push)
+          git diff --cached --quiet || (git commit -m "results $(date -u +%F)" && git push)
