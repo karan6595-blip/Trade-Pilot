@@ -181,10 +181,14 @@
   },
   {
    "date": "2026-11-19",
-   "status": "running",
+   "method": "replay-v3",
    "trades": [],
-   "max_lag_min": 1.0,
-   "notes": []
+   "notes": [
+    "BANK NIFTY signal skipped: 1 lot costs about \u20b914,895",
+    "NIFTY 50 signal skipped: 1 lot costs about \u20b910,370"
+   ],
+   "net_rupees": 0,
+   "net_points": 0
   }
  ],
  "last_check": {
@@ -234,5 +238,5 @@
   "max_trades": 2,
   "max_consec_losses": 2
  },
- "updated": "2026-11-19T10:57:05.725986+05:30"
+ "updated": "2026-11-19T12:18:44.191053+05:30"
 }
