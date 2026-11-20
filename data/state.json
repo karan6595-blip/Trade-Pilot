@@ -60,13 +60,29 @@
   {
    "date": "2026-11-12",
    "method": "replay-v3",
-   "trades": [],
-   "notes": [
-    "NIFTY 50 signal skipped: 1 lot costs about \u20b911,894",
-    "BANK NIFTY signal skipped: 1 lot costs about \u20b922,074"
+   "trades": [
+    {
+     "inst": "NIFTY 50",
+     "dir": 1,
+     "side": "CE",
+     "strike": 25350,
+     "spot_in": 25371.95,
+     "expiry": "2026-11-17 15:30:00+05:30",
+     "lots": 2,
+     "entry_prem": 182.99,
+     "entry_time": "10:00",
+     "stop_prem": 137.2425,
+     "target_prem": 250.69630000000004,
+     "exit_prem": 137.24,
+     "exit_time": "11:14",
+     "reason": "stop",
+     "points": -85.95,
+     "est_rupees": -6070.44
+    }
    ],
-   "net_rupees": 0,
-   "net_points": 0
+   "notes": [],
+   "net_rupees": -6070.44,
+   "net_points": -85.95
   },
   {
    "date": "2026-11-13",
@@ -79,7 +95,7 @@
      "strike": 25250,
      "spot_in": 25225.65,
      "expiry": "2026-11-17 15:30:00+05:30",
-     "lots": 1,
+     "lots": 3,
      "entry_prem": 139.61,
      "entry_time": "09:57",
      "stop_prem": 104.70750000000001,
@@ -88,11 +104,11 @@
      "exit_time": "11:15",
      "reason": "time",
      "points": -57.0,
-     "est_rupees": -2020.54
+     "est_rupees": -5981.63
     }
    ],
    "notes": [],
-   "net_rupees": -2020.54,
+   "net_rupees": -5981.63,
    "net_points": -57.0
   },
   {
@@ -100,76 +116,72 @@
    "method": "replay-v3",
    "trades": [
     {
-     "inst": "NIFTY 50",
+     "inst": "BANK NIFTY",
      "dir": 1,
      "side": "CE",
-     "strike": 25300,
-     "spot_in": 25322.2,
-     "expiry": "2026-11-17 15:30:00+05:30",
+     "strike": 61600,
+     "spot_in": 61601.4,
+     "expiry": "2026-11-24 15:30:00+05:30",
      "lots": 1,
-     "entry_prem": 91.93,
-     "entry_time": "09:52",
-     "stop_prem": 68.9475,
-     "target_prem": 125.94410000000002,
-     "exit_prem": 68.95,
-     "exit_time": "10:12",
+     "entry_prem": 606.34,
+     "entry_time": "09:51",
+     "stop_prem": 454.755,
+     "target_prem": 830.6858000000001,
+     "exit_prem": 454.75,
+     "exit_time": "10:43",
      "reason": "stop",
-     "points": -46.6,
-     "est_rupees": -1554.78
+     "points": -289.25,
+     "est_rupees": -4651.22
     }
    ],
-   "notes": [
-    "BANK NIFTY signal skipped: 1 lot costs about \u20b918,190"
-   ],
-   "net_rupees": -1554.78,
-   "net_points": -46.6
+   "notes": [],
+   "net_rupees": -4651.22,
+   "net_points": -289.25
   },
   {
    "date": "2026-11-17",
    "method": "replay-v3",
    "trades": [
     {
-     "inst": "NIFTY 50",
+     "inst": "BANK NIFTY",
      "dir": 1,
      "side": "CE",
-     "strike": 25350,
-     "spot_in": 25372.8,
-     "expiry": "2026-11-17 15:30:00+05:30",
-     "lots": 3,
-     "entry_prem": 47.1,
-     "entry_time": "09:52",
-     "stop_prem": 35.325,
-     "target_prem": 64.527,
-     "exit_prem": 64.53,
-     "exit_time": "10:19",
+     "strike": 61900,
+     "spot_in": 61932.4,
+     "expiry": "2026-11-24 15:30:00+05:30",
+     "lots": 1,
+     "entry_prem": 585.11,
+     "entry_time": "09:50",
+     "stop_prem": 438.8325,
+     "target_prem": 801.6007000000001,
+     "exit_prem": 801.6,
+     "exit_time": "10:18",
      "reason": "target",
-     "points": 39.2,
-     "est_rupees": 3314.73
+     "points": 390.8,
+     "est_rupees": 6371.52
     },
     {
      "inst": "NIFTY 50",
      "dir": 1,
      "side": "CE",
      "strike": 25400,
-     "spot_in": 25398.75,
+     "spot_in": 25409.45,
      "expiry": "2026-11-17 15:30:00+05:30",
-     "lots": 4,
-     "entry_prem": 32.17,
-     "entry_time": "10:20",
-     "stop_prem": 24.1275,
-     "target_prem": 44.072900000000004,
-     "exit_prem": 24.13,
-     "exit_time": "10:33",
+     "lots": 12,
+     "entry_prem": 37.91,
+     "entry_time": "10:19",
+     "stop_prem": 28.432499999999997,
+     "target_prem": 51.9367,
+     "exit_prem": 28.43,
+     "exit_time": "10:28",
      "reason": "stop",
-     "points": -17.45,
-     "est_rupees": -2160.32
+     "points": -16.55,
+     "est_rupees": -7535.94
     }
    ],
-   "notes": [
-    "BANK NIFTY signal skipped: 1 lot costs about \u20b917,553"
-   ],
-   "net_rupees": 1154.41,
-   "net_points": 21.75
+   "notes": [],
+   "net_rupees": -1164.42,
+   "net_points": 374.25
   },
   {
    "date": "2026-11-18",
@@ -182,13 +194,29 @@
   {
    "date": "2026-11-19",
    "method": "replay-v3",
-   "trades": [],
-   "notes": [
-    "BANK NIFTY signal skipped: 1 lot costs about \u20b914,895",
-    "NIFTY 50 signal skipped: 1 lot costs about \u20b910,385"
+   "trades": [
+    {
+     "inst": "BANK NIFTY",
+     "dir": 1,
+     "side": "CE",
+     "strike": 62300,
+     "spot_in": 62329.4,
+     "expiry": "2026-11-24 15:30:00+05:30",
+     "lots": 2,
+     "entry_prem": 496.5,
+     "entry_time": "09:48",
+     "stop_prem": 372.375,
+     "target_prem": 680.205,
+     "exit_prem": 525.54,
+     "exit_time": "11:15",
+     "reason": "time",
+     "points": 76.95,
+     "est_rupees": 1579.73
+    }
    ],
-   "net_rupees": 0,
-   "net_points": 0
+   "notes": [],
+   "net_rupees": 1579.73,
+   "net_points": 76.95
   }
  ],
  "last_check": {
@@ -224,7 +252,7 @@
    "BANK NIFTY": 0.15
   },
   "rate": 0.065,
-  "daily_capital": 10000,
+  "daily_capital": 30000,
   "stop_pct": 25,
   "target_pct": 37,
   "slip_pct": 1,
@@ -238,5 +266,5 @@
   "max_trades": 2,
   "max_consec_losses": 2
  },
- "updated": "2026-11-19T15:04:29.345299+05:30"
+ "updated": "2026-11-20T09:48:58.097297+05:30"
 }
