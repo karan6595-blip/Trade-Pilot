@@ -11,7 +11,7 @@ CFG = dict(
     step={"NIFTY 50": 50, "BANK NIFTY": 100},
     iv={"NIFTY 50": 0.13, "BANK NIFTY": 0.15},   # ASSUMED implied volatility
     rate=0.065,
-    daily_capital=10000,     # same amount for every trade; profit/loss kept aside
+    daily_capital=30000,     # same amount for every trade; profit/loss kept aside
     stop_pct=25, target_pct=37, slip_pct=1,
     brokerage=40, var_charge_pct=0.2,            # ASSUMED; VERIFY on Groww
     or_end="09:45", entry_end="11:00", stop_all="11:15",
@@ -109,7 +109,7 @@ def replay(day, frames):
                 p = dict(inst=n, dir=dr, side="CE" if dr == 1 else "PE", strike=K, spot_in=round(S, 2),
                          expiry=expiry(n, t.date(), t1))
                 prem = round(value(p, S, t1) * (1 + slip), 2)
-                lots = int(C["daily_capital"] // (prem * C["lot"][n]))
+                lots = max(1, int(C["daily_capital"] // (prem * C["lot"][n])))
                 if lots < 1:
                     if not any(x.startswith(n + " signal skipped") for x in s["notes"]):
                         s["notes"].append(f"{n} signal skipped: 1 lot costs about ₹{prem * C['lot'][n]:,.0f}")
