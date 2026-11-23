@@ -244,6 +244,14 @@
    "notes": [],
    "net_rupees": -304.39,
    "net_points": 5.6
+  },
+  {
+   "date": "2026-11-23",
+   "method": "replay-v3",
+   "trades": [],
+   "notes": [],
+   "net_rupees": 0,
+   "net_points": 0
   }
  ],
  "last_check": {
@@ -293,5 +301,5 @@
   "max_trades": 2,
   "max_consec_losses": 2
  },
- "updated": "2026-11-20T14:59:46.746234+05:30"
+ "updated": "2026-11-23T12:26:31.651889+05:30"
 }
