@@ -306,6 +306,33 @@
    "notes": [],
    "net_rupees": 2942.74,
    "net_points": 50.3
+  },
+  {
+   "date": "2026-11-27",
+   "method": "replay-v3",
+   "trades": [
+    {
+     "inst": "NIFTY 50",
+     "dir": -1,
+     "side": "PE",
+     "strike": 25750,
+     "spot_in": 25774.35,
+     "expiry": "2026-12-01 15:30:00+05:30",
+     "lots": 3,
+     "entry_prem": 123.85,
+     "entry_time": "10:32",
+     "stop_prem": 92.88749999999999,
+     "target_prem": 169.6745,
+     "exit_prem": 132.79,
+     "exit_time": "11:15",
+     "reason": "time",
+     "points": 25.8,
+     "est_rupees": 1603.05
+    }
+   ],
+   "notes": [],
+   "net_rupees": 1603.05,
+   "net_points": 25.8
   }
  ],
  "last_check": {
@@ -355,5 +382,5 @@
   "max_trades": 2,
   "max_consec_losses": 2
  },
- "updated": "2026-11-26T15:11:16.194094+05:30"
+ "updated": "2026-11-27T12:20:13.886089+05:30"
 }
